@@ -8,8 +8,8 @@
   <!-- Open Graph / WhatsApp Preview Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Η Βάπτιση της Ευδοκίας">
-  <meta property="og:description" content="Κυριακή 18 Οκτωβρίου 2026 στις 12:30 | Ι.Ν. Αγίας Τριάδας Γλυφάδας">
-  <meta property="og:image" content="https://eudokia-goes-bloom.github.io/eudokia/invitation.png">
+  <meta property="og:description" content="Κυριακή 18 Οκτωβρίου 2026 στις 12:30 | Καθεδρικός Ναός Αγίας Τριάδος Άνω Γλυφάδας">
+  <meta property="og:image" content="https://eudokia-goes-bloom.github.io/eudokia/preview.jpg">
   <meta property="og:url" content="https://eudokia-goes-bloom.github.io/eudokia/">
 
   <style>
@@ -23,17 +23,16 @@
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
+      padding: 0;
       background: var(--bg);
       font-family: Georgia, "Times New Roman", serif;
-    }
-    body {
       min-height: 100vh;
       display: flex;
       justify-content: center;
     }
     .page {
-      width: min(100%, 920px);
-      padding: 24px 14px 36px;
+      width: min(100%, 720px);
+      padding: 20px 10px 30px;
     }
     .invite {
       position: relative;
@@ -41,6 +40,7 @@
       background: var(--paper);
       box-shadow: var(--shadow);
       overflow: hidden;
+      border-radius: 8px;
     }
     .invite img {
       display: block;
@@ -62,26 +62,29 @@
       inset: 0;
       border-radius: inherit;
       opacity: 0;
-      background: rgba(206, 94, 130, .07);
-      border: 1px solid rgba(206, 94, 130, .20);
+      background: rgba(206, 94, 130, .08);
+      border: 1px solid rgba(206, 94, 130, .25);
       transition: .18s ease;
     }
     .hotspot:hover::before,
     .hotspot:focus-visible::before {
       opacity: 1;
-      box-shadow: 0 0 0 4px rgba(206, 94, 130, .07);
+      box-shadow: 0 0 0 4px rgba(206, 94, 130, .10);
     }
 
+    /* Hotspot για τον Καθεδρικό Ναό */
     .location-link {
       left: 34.5%;
       top: 72.8%;
       width: 61.5%;
       height: 4.4%;
     }
+
+    /* Hotspot για το τηλέφωνο RSVP */
     .phone-link {
       left: 53.0%;
       top: 89.3%;
-      width: 28.0%;
+      width: 32.0%;
       height: 4.1%;
     }
 
@@ -91,23 +94,23 @@
       opacity: 0;
       pointer-events: none;
       transition: .18s ease;
-      padding: 8px 11px;
+      padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(255, 250, 245, .97);
+      background: rgba(255, 250, 245, .98);
       color: var(--ink);
-      border: 1px solid rgba(63, 119, 123, .18);
-      box-shadow: 0 5px 16px rgba(67, 43, 35, .12);
+      border: 1px solid rgba(63, 119, 123, .20);
+      box-shadow: 0 4px 14px rgba(67, 43, 35, .12);
       font: 600 12px/1 system-ui, sans-serif;
       white-space: nowrap;
     }
     .location-tip {
-      left: 66%;
-      top: 69.6%;
+      left: 65%;
+      top: 69.5%;
       transform: translate(-50%, 4px);
     }
     .phone-tip {
-      left: 67%;
-      top: 86.2%;
+      left: 69%;
+      top: 86.0%;
       transform: translate(-50%, 4px);
     }
 
@@ -129,22 +132,17 @@
       border: 0;
     }
     .hint {
-      margin: 12px 0 0;
+      margin: 14px 0 0;
       text-align: center;
       color: #6d6863;
-      font: 13px/1.45 system-ui, sans-serif;
+      font: 13px/1.4 system-ui, sans-serif;
     }
+
     @media (max-width: 640px) {
-      .page { padding: 0; }
-      .invite { box-shadow: none; }
+      .page { padding: 0 0 20px 0; width: 100%; }
+      .invite { box-shadow: none; border-radius: 0; }
       .tooltip { display: none; }
-      .hint { padding: 0 16px 18px; }
-    }
-    @media print {
-      body { background: #fff; }
-      .page { width: 100%; padding: 0; }
-      .invite { box-shadow: none; }
-      .hotspot, .tooltip, .hint { display: none !important; }
+      .hint { padding: 10px 16px 0; }
     }
   </style>
 </head>
@@ -153,19 +151,19 @@
   <section class="invite" aria-label="Προσκλητήριο βάπτισης Ευδοκίας">
     <img src="invitation.png" alt="Προσκλητήριο Βάπτισης Ευδοκίας">
 
-    <!-- Location Hotspot (Google Maps) -->
-    <a class="hotspot location-link" href="https://maps.google.com/?q=Agia+Triada+Glyfada" target="_blank" rel="noopener">
-      <span class="sr-only">Τοποθεσία: Ιερός Ναός Αγίας Τριάδας Γλυφάδας</span>
+    <!-- Location Link: Google Maps -->
+    <a class="hotspot location-link" href="https://maps.google.com/?q=Cathedral+Church+of+the+Holy+Trinity+Glyfada" target="_blank" rel="noopener">
+      <span class="sr-only">Τοποθεσία: Καθεδρικός Ναός Αγίας Τριάδος Άνω Γλυφάδας</span>
     </a>
-    <span class="tooltip location-tip" aria-hidden="true">Άνοιγμα στους Χάρτες</span>
+    <span class="tooltip location-tip" aria-hidden="true">Οδηγίες στους Χάρτες</span>
 
-    <!-- RSVP Phone Hotspot -->
-    <a class="hotspot phone-link" href="tel:+306900000000">
-      <span class="sr-only">Τηλέφωνο Επικοινωνίας</span>
+    <!-- Phone Link: Call RSVP -->
+    <a class="hotspot phone-link" href="tel:+306932908037">
+      <span class="sr-only">Τηλέφωνο Επικοινωνίας: +30 693 290 8037</span>
     </a>
     <span class="tooltip phone-tip" aria-hidden="true">Κλήση RSVP</span>
   </section>
-  <p class="hint">Πατήστε στην τοποθεσία για οδηγίες πλοήγησης ή στο τηλέφωνο για επιβεβαίωση.</p>
+  <p class="hint">Πατήστε στην τοποθεσία για Google Maps ή στο τηλέφωνο για κλήση.</p>
 </main>
 </body>
 </html>
